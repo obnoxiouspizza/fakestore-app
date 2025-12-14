@@ -1,0 +1,44 @@
+:root {
+  --page-max: 1100px;
+}
+
+/* Give the whole app a soft modern background */
+body {
+  background: #f6f7fb;
+}
+
+/* Keep content from stretching too wide on huge monitors */
+.app-container {
+  max-width: var(--page-max);
+}
+
+/* Nice, consistent card feel */
+.soft-card {
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Make product images behave consistently */
+.product-image {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+/* Slightly tighter typography */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Buttons feel a bit more modern */
+.btn {
+  border-radius: 12px;
+}
+
+/* Inputs match the rounded look */
+.form-control {
+  border-radius: 12px;
+}
