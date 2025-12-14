@@ -1,16 +1,59 @@
-# React + Vite
+# FakeStore E-Commerce App (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive e-commerce front-end built with **React**, **React Router**, **Axios**, and **React Bootstrap** using the **FakeStoreAPI**. Users can browse products, view details, and simulate creating, editing, and deleting products via API calls.
 
-Currently, two official plugins are available:
+> **Note:** FakeStoreAPI is a mock/testing API. It will return successful responses to POST/PUT/DELETE requests, but changes will **not persist** after refresh or refetch.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Home page** with a quick intro + navigation
+- **Product Listing** page:
+  - Fetches products from the API
+  - Displays product image, title, and price
+  - "View Details" navigation for each product
+- **Product Details** page:
+  - Fetches a single product by ID using route params
+  - Shows image, title, description, category, and price
+  - Includes **Delete** with confirmation modal + redirect
+  - Includes "Edit Product" navigation
+- **Add Product** page:
+  - Form to create a product (POST)
+  - Displays success confirmation
+- **Edit Product** page:
+  - Pre-fills form with existing product data (GET)
+  - Updates product (PUT)
+  - Displays success confirmation
+- **Responsive UI** using React Bootstrap
+- **Loading + error handling** for API calls
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React (Vite)
+- React Router
+- Axios
+- React Bootstrap + Bootstrap
+- FakeStoreAPI
+
+---
+
+## Routes
+
+- `/` — Home
+- `/products` — Product Listing
+- `/products/:id` — Product Details
+- `/add-product` — Add Product
+- `/edit-product/:id` — Edit Product
+
+---
+
+## Getting Started (Local Setup)
+
+1. Clone the repo:
+   ```bash
+   git clone <YOUR_REPO_URL>
+   cd fakestore-app
+
